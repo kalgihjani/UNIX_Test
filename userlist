@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FILE=passwd1.txt
+
+while read line;
+do
+	echo $line | awk -F':' '{print "userid = "$1}'
+done < $FILE
